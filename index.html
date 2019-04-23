@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | EthConnect</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="TemplateData/UnityProgress.js"></script>
+    <script src="Build/UnityLoader.js"></script>
+    <script>
+      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/WebGL-Test.json", {onProgress: UnityProgress});
+    </script>
+    <script src="web3.js"></script>
+    <script type="text/javascript">
+    const web3 = new Web3(Web3.currentProvider);
+    async function requestAccounts(){
+    let request = await web3.eth.requestAccounts();
+    }
+
+    async function getNetwork(){
+    let network = await web3.eth.net.getNetworkType();
+    return network;
+    }
+
+    async function getAccount(){
+    let accounts = await web3.eth.getAccounts()
+    return accounts[0];
+    }
+
+    requestAccounts();
+    console.log(getNetwork());
+    console.log(getAccount());
+
+    console.log(network)
+    console.log(account)
+
+    </script>
+  </head>
+  <body>
+    <div class="webgl-content">
+      <div id="gameContainer" style="width: 960px; height: 600px"></div>
+      <div class="footer">
+        <div class="webgl-logo"></div>
+        <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
+        <div class="title">EthConnect</div>
+      </div>
+    </div>
+  </body>
+</html>
