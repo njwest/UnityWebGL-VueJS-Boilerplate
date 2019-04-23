@@ -5,6 +5,19 @@ This is a boilerplate **Unity WebGL** ++ **VueJS** web app with **VueX && **vue-
 This project takes advantage of the Unity3d web container wrapper component provided by
 @votetake's [vue-unity-webgl](https://github.com/votetake/vue-unity-webgl) Node package.
 
+## Run in Dev
+
+Install deps:
+```
+npm install
+```
+
+Spin up Node dev server:
+```
+npm run serve
+```
+
+
 ## Directory Structure
 
 `./public/Build` && `./public/TemplateData` - the templates/JS functions of a bare Unity3D WebGL project.
@@ -19,6 +32,8 @@ Text can be sent to the text object in the Unity game instance via the `@click` 
 // $refs.myInstance === <unity ref="myInstance">
 this.$refs.myInstance.message('Text', 'SetText', this.textInput)
 ```
+
+
 
 ## Project setup
 ```
