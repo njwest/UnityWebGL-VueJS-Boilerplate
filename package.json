@@ -1,5 +1,6 @@
 {
-  "name": "unity-vue-boilerplate",
+  "name": "unity-vuejs-boilerplate",
+  "author": "Nick West <mail@nickwe.st>",
   "version": "0.1.0",
   "private": true,
   "scripts": {
