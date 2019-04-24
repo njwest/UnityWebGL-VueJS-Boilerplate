@@ -17,7 +17,6 @@ Spin up Node dev server:
 npm run serve
 ```
 
-
 ## Directory Structure
 
 `./public/Build` && `./public/TemplateData` - the templates/JS functions of a bare Unity3D WebGL project.
@@ -33,7 +32,14 @@ Text can be sent to the text object in the Unity game instance via the `@click` 
 this.$refs.myInstance.message('Text', 'SetText', this.textInput)
 ```
 
+Note: Further configuration is needed to make the text input in `./src/views/Home.vue` editable after the Unity game loads,
+since the Unity WebGL instance grabs all keyboard input to the page. There is an example string in the input box for this reason.
 
+[Related Unity forum thread](https://forum.unity.com/threads/disable-enable-keyboard-in-runtime-webgl.286557/#post-1892527)
+
+## Trigger a webpage JavaScript function from Unity Scene
+
+[WIP] 
 
 ## Project setup
 ```
